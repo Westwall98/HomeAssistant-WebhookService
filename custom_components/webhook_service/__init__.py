@@ -12,7 +12,7 @@ def setup(hass, config):
     def send_basic_webhook(call):
         data = call.data.copy()
         if "json" in data:
-            jsondata = json.loads(data["json"])
+            jsondata = data.get("json",{})
         else:
             jsondata = {}
         result = requests.post(data["webhook"], json = jsondata)
