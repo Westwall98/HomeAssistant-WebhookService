@@ -11,5 +11,5 @@ Use the `webhook_service:basic_webhook` service in automations to post json data
 service: webhook_service.basic_webhook
 data:
   webhook: https://somewhere.com
-  json: '{"test": "test"}'
+  json: {"test": "test"}
 ```
